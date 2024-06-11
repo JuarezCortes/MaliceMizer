@@ -1,20 +1,20 @@
 import { setStatusBarBackgroundColor } from 'expo-status-bar';
 import Category from '../models/category';
-import Meal from '../models/meal';
+import Datos from '../models/Datos';
 
 export const CATEGORIES = [
-  new Category('c1', 'Malice Mizer', 'black'),
-  new Category('c2', 'Gackt', '#A67A46'),
-  new Category('c3', 'ManaSama', '#292840'),
-  new Category('c4', 'Kozi', '#400101'),
-  new Category('c5', 'Yuki', '#D97823'),
-  new Category('c6', 'Kami', '#A64170')
+  new Category('I0', 'Malice Mizer', 'black'),
+  new Category('I1', 'Gackt', '#A67A46'),
+  new Category('I2', 'ManaSama', '#292840'),
+  new Category('I3', 'Kozi', '#400101'),
+  new Category('I4', 'Yuki', '#D97823'),
+  new Category('I5', 'Kami', '#A64170')
 ];
 
 export const MEALS = [
-  new Meal(
-    'm1',
-    ['c1'],
+  new Datos(
+    'm0',
+    ['I0'],
     'Malice Mizer',
     '1995-1999',
     'Era',
@@ -37,9 +37,9 @@ export const MEALS = [
     true
   ),
 
-  new Meal(
-    'm2',
-    ['c2'],
+  new Datos(
+    'm1',
+    ['I1'],
     'Gackt',
     'piano',
     'Vocalista y',
@@ -61,9 +61,9 @@ export const MEALS = [
     false
   ),
 
-  new Meal(
-    'm3',
-    ['c3'],
+  new Datos(
+    'm2',
+    ['I2'],
     'ManaSama',
     'sintetizador',
     'Guitarrista  y',
@@ -85,9 +85,9 @@ export const MEALS = [
     true
   ),
 
-  new Meal(
-    'm4',
-    ['c4'],
+  new Datos(
+    'm3',
+    ['I3'],
     'Kozi',
     'coros',
     'Guitarrista y',
@@ -110,9 +110,9 @@ export const MEALS = [
     false
   ),
 
-  new Meal(
-    'm5',
-    ['c5'],
+  new Datos(
+    'I4',
+    ['I4'],
     'Yuki',
     'coros',
     'Bajo y',
@@ -131,9 +131,9 @@ export const MEALS = [
     true
   ),
 
-  new Meal(
-    'm6',
-    ['c6'],
+  new Datos(
+    'm5',
+    ['I5'],
     'Kami',
     'coros',
     'Bateria y',

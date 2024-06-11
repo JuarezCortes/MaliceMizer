@@ -1,4 +1,4 @@
-class Meal {
+class Datos {
   constructor(
     id,
     categoryIds,
@@ -8,11 +8,8 @@ class Meal {
     imageUrl,
     duration,
     grupos,
-    steps,
-    isGlutenFree,
-    isVegan,
-    isVegetarian,
-    isLactoseFree
+    steps
+
   ) {
     this.id = id;
     this.categoryIds = categoryIds;
@@ -21,13 +18,10 @@ class Meal {
     this.grupos = grupos;
     this.steps = steps;
     this.duration = duration;
-    this.complexity = complexity;
+    this.complexity = complexity
     this.affordability = affordability;
-    this.isGlutenFree = isGlutenFree;
-    this.isVegan = isVegan;
-    this.isVegetarian = isVegetarian;
-    this.isLactoseFree = isLactoseFree;
+
   }
 }
 
-export default Meal;
+export default Datos;

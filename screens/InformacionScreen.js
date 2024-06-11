@@ -1,9 +1,9 @@
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native"
 
-import { MEALS } from '../data/dummy_data'
+import { MEALS } from '../data/DatosMalice'
 import Informacion from "../components/Informacion"
 
-function MealDetailScree({route, navigation}) {
+function InformacionScree({route, navigation}) {
     const mealId = route.params.mealId
 
     const selectedMeal = MEALS.find((meal) => meal.id === mealId)
@@ -18,9 +18,9 @@ function MealDetailScree({route, navigation}) {
                 affordability={selectedMeal.affordability}
             />
             <View>
-                <Text style={styles.subtitle}>Información</Text>
+                <Text style={styles.subtitle}>Detalles</Text>
                 {selectedMeal.grupos.map(grupos => <Text style={styles.textContent} key={grupos}>{grupos}</Text>)}
-                <Text style={styles.subtitle}></Text>
+                <Text style={styles.subtitle}> </Text>
                 {selectedMeal.steps.map(step => <Text style={styles.textContent} key={step}>{step}</Text>)}
             </View>
         </ScrollView>
@@ -28,7 +28,7 @@ function MealDetailScree({route, navigation}) {
 
 }
 
-export default MealDetailScree
+export default InformacionScree
 
 const styles = StyleSheet.create({
     image: {

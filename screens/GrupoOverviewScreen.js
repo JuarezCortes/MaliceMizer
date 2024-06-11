@@ -1,10 +1,10 @@
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import { useLayoutEffect } from 'react'
 
-import { MEALS, CATEGORIES } from "../data/dummy_data";
+import { MEALS, CATEGORIES } from "../data/DatosMalice";
 import MealItem from "../components/MealItem";
 
-function MealsOverviewScreen({ route, navigation }){
+function GrupoOverviewScreen({ route, navigation }){
     const catId = route.params.categoryId
     console.log('catId', catId)
 
@@ -38,7 +38,7 @@ function MealsOverviewScreen({ route, navigation }){
 
     return(
         <View style={styles.container}>
-            <Text>Meals Overview - { catId }</Text>
+            <Text>Integrante - { catId }</Text>
             <FlatList 
                 data={displayedMeals}
                 keyExtractor={(item) => item.id}
@@ -48,7 +48,7 @@ function MealsOverviewScreen({ route, navigation }){
     )
 }
 
-export default MealsOverviewScreen
+export default GrupoOverviewScreen
 
 const styles = StyleSheet.create({
     container: {

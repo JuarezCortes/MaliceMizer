@@ -9,7 +9,7 @@ function MealItem({ id, title, imageUrl, duration, complexity, affordability }){
     const navigation = useNavigation()
    
     function selectMealItemHandler(){
-        navigation.navigate('MealDetail', { mealId: id})
+        navigation.navigate('Información', { mealId: id})
     }
 
     return(
