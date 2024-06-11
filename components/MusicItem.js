@@ -2,23 +2,23 @@ import { View, Text, Image, Pressable, StyleSheet, Platform } from "react-native
 import { useNavigation} from '@react-navigation/native'
 import Informacion from "./Informacion"
 
-function MealItem({ id, title, imageUrl, duration, complexity, affordability }){
+function MusicItem({ id, title, imageUrl, duration, complexity, affordability }){
     console.log('title', title)
     console.log('imageUrl', imageUrl)
 
     const navigation = useNavigation()
    
-    function selectMealItemHandler(){
-        navigation.navigate('Información', { mealId: id})
+    function selectMusicItemHandler(){
+        navigation.navigate('Información', { musicId: id})
     }
 
     return(
-        <View style={styles.mailItem}>
+        <View style={styles.musicItem}>
             <Pressable 
             
                 android_ripple={{ color: '#ccc'}}
                 style={({ pressed }) => (pressed ? styles.buttonPressed : null) } 
-                onPress={selectMealItemHandler}
+                onPress={selectMusicItemHandler}
             >
                 <View>
                     <View>
@@ -42,10 +42,10 @@ function MealItem({ id, title, imageUrl, duration, complexity, affordability }){
 
 }
 
-export default MealItem
+export default MusicItem
 
 const styles = StyleSheet.create({
-    mealItem: {
+    musicItem: {
         margin: 16,
         borderRadius: 8,
         overflow: Platform.OS === 'android' ? 'hidden' : 'visible',

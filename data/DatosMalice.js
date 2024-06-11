@@ -11,7 +11,7 @@ export const CATEGORIES = [
   new Category('I5', 'Kami', '#A64170')
 ];
 
-export const MEALS = [
+export const MUSIC = [
   new Datos(
     'm0',
     ['I0'],

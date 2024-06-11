@@ -1,15 +1,15 @@
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import { useLayoutEffect } from 'react'
 
-import { MEALS, CATEGORIES } from "../data/DatosMalice";
-import MealItem from "../components/MealItem";
+import { MUSIC, CATEGORIES } from "../data/DatosMalice";
+import MusicItem from "../components/MusicItem";
 
 function GrupoOverviewScreen({ route, navigation }){
     const catId = route.params.categoryId
     console.log('catId', catId)
 
-    const displayedMeals = MEALS.filter((mealItem) => {
-        return mealItem.categoryIds.indexOf(catId) >= 0
+    const displayedMusic = MUSIC.filter((musicItem) => {
+        return musicItem.categoryIds.indexOf(catId) >= 0
     })
 
     useLayoutEffect(() => {
@@ -20,11 +20,11 @@ function GrupoOverviewScreen({ route, navigation }){
         })
     }, [catId, navigation])
 
-    function renderMealItem(itemData) {
+    function renderMusicItem(itemData) {
     
         return(
 
-            <MealItem
+            <MusicItem
                 id={itemData.item.id} 
                 title={itemData.item.title}
                 imageUrl={itemData.item.imageUrl}
@@ -40,9 +40,9 @@ function GrupoOverviewScreen({ route, navigation }){
         <View style={styles.container}>
             <Text>Integrante - { catId }</Text>
             <FlatList 
-                data={displayedMeals}
+                data={displayedMusic}
                 keyExtractor={(item) => item.id}
-                renderItem={renderMealItem}
+                renderItem={renderMusicItem}
             />
         </View>
     )

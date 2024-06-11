@@ -30,7 +30,7 @@ export default function App() {
             component={CategoriesScreen}
           />
           <Stack.Screen 
-            name="MealsOverview" 
+            name="MusicOverview" 
             component={GrupoOverviewScreen}
             options={{
               title: 'All categories',
